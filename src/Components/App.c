@@ -9,10 +9,9 @@ int App_Init(int argc, char **argv) {
 
   Window_Create(&window, 0, 0, 30, 30);
   Window_Fullscreen(&window);
+  
   refresh();
-
   Window_Update(&window);
-  refresh();
 
   getch();
   endwin();
