@@ -1,16 +1,20 @@
 #ifndef __C_WINDOW_H__
 #define __C_WINDOW_H__
 
+#include <curses.h>
 #include <sys/ioctl.h>
 #include <unistd.h>
 
 typedef struct {
-  int Width;
-  int Height;
+  WINDOW *win;
+  int x;
+  int y;
+  int width;
+  int height;
 } Window;
 
-typedef struct winsize WinSize;
-
-void Window_GetSizeFromEnv(Window *target);
+void Window_Create(Window *target, int x, int y, int width, int height);
+void Window_Update(Window *target);
+void Window_Fullscreen(Window *target);
 
 #endif

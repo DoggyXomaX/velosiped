@@ -1,15 +1,19 @@
 #include "./App.h"
 #include "./Window.h"
+#include <curses.h>
 
 int App_Init(int argc, char **argv) {
-  Window window;
-  Window_GetSizeFromEnv(&window);
-
-  printf("Terminal[%d, %d]\n", window.Width, window.Height);
-
   initscr();
-  printw("Hello, ncurses!");
+
+  Window window;
+
+  Window_Create(&window, 0, 0, 30, 30);
+  Window_Fullscreen(&window);
   refresh();
+
+  Window_Update(&window);
+  refresh();
+
   getch();
   endwin();
 
