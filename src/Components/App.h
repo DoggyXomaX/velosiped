@@ -3,6 +3,10 @@
 
 #include <stdio.h>
 
+typedef struct {
+
+} App;
+
 int App_Init(int argc, char **argv);
 
 #endif

@@ -9,6 +9,8 @@ typedef struct {
   int Height;
 } Window;
 
+typedef struct winsize WinSize;
+
 void Window_GetSizeFromEnv(Window *target);
 
 #endif
