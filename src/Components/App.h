@@ -2,6 +2,7 @@
 #define __C_APP_H__
 
 #include <stdio.h>
+#include <ncurses.h>
 
 typedef struct {
 

@@ -7,5 +7,11 @@ int App_Init(int argc, char **argv) {
 
   printf("Terminal[%d, %d]\n", window.Width, window.Height);
 
+  initscr();
+  printw("Hello, ncurses!");
+  refresh();
+  getch();
+  endwin();
+
   return 0;
 }
